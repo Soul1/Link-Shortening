@@ -1,4 +1,5 @@
 {
   "port" : 5000,
+  "jwtSecret": "mern learning",
   "mongoUrl": "mongodb+srv://akhmad:solomandr@cluster0-hsbzz.mongodb.net/app?retryWrites=true&w=majority"
 }
