@@ -1,0 +1,35 @@
+{
+  "name": "link-shortening",
+  "version": "1.0.0",
+  "description": "Mern stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soul1/Link-Shortening.git"
+  },
+  "keywords": [
+    "React",
+    "Node",
+    "Mongo",
+    "Express"
+  ],
+  "author": "Akhmad Midaev <darkwaud@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Soul1/Link-Shortening/issues"
+  },
+  "homepage": "https://github.com/Soul1/Link-Shortening#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.3"
+  }
+}
