@@ -1,4 +1,4 @@
 {
   "port" : 5000,
-  "monboUrl": "mongodb+srv://akhmad:solomandr@cluster0-hsbzz.mongodb.net/app?retryWrites=true&w=majority"
+  "mongoUrl": "mongodb+srv://akhmad:solomandr@cluster0-hsbzz.mongodb.net/app?retryWrites=true&w=majority"
 }
