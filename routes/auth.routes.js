@@ -51,7 +51,7 @@ router.post('/login',
     try {
       const errors = validationResult(req);
 
-      if (errors.isEmpty()) {
+      if (!errors.isEmpty()) {
         return res.status(400).json({
           errors: errors.array(),
           message: 'Некорректные данные для при входе...'
