@@ -1,11 +1,31 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useHttp} from "../hooks/http.hook";
+import {useMessage} from "../hooks/message.hook";
 
 const Auth = () => {
+  const message = useMessage()
+  const {loading, error, request, clearError} = useHttp();
   const [form, setForm] = useState({
     email: '', pass: ''
   });
+
+  useEffect(() => {
+    message(error);
+    clearError()
+  }, [error, message, clearError]);
+
   const changeHandler = e => {
     setForm({...form, [e.target.name]: e.target.value})
+  };
+
+  const registerHandler = async () => {
+    try {
+      const data = await request(
+        '/api/auth/register',
+        'POST', {...form});
+      message(data.massage);
+    } catch (e) {
+    }
   };
 
   return (
@@ -40,8 +60,19 @@ const Auth = () => {
             </div>
           </div>
           <div className="card-action">
-            <button className='btn yellow darken-4 logIn'>Войти</button>
-            <button className='btn grey lighten-1 darken-1'>Регистрация</button>
+            <button
+              className='btn yellow darken-4 logIn'
+              disabled={loading}
+            >
+              Войти
+            </button>
+            <button
+              className='btn grey lighten-1 darken-1'
+              onClick={registerHandler}
+              disabled={loading}
+            >
+              Регистрация
+            </button>
           </div>
         </div>
       </div>

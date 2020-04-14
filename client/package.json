@@ -21,6 +21,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -34,7 +35,6 @@
     ]
   },
   "devDependencies": {
-    "node-loader": "^0.6.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2"
   }
